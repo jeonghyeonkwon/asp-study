@@ -95,3 +95,17 @@ id : <input type="text" name="fid">
   Response.write(request.form("fPASSWORD"))
 %>
 ```
+
+## 쿠키
+
+```VB
+<%
+
+<!-- 쿠기 보내기 -->
+Response.Cookies("key") = "value"
+
+
+<!-- 쿠키 받기 -->
+str = Request.Cookies("key")
+%>
+```
