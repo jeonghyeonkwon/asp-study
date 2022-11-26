@@ -60,3 +60,62 @@ Select Case d
         Response.write("4")
 End Select
 ```
+
+## 반복문
+
+### For문
+
+```VB
+<!-- For문 닫을 때는 Next로 닫음 -->
+
+<!-- To (index 사용) -->
+<!-- for(int i=0; i<=10; i+2) 와 같음 -->
+For i = 0 To 10 Step 2
+    Response.Write("i : " & i )
+    <!-- 빠져나오고 싶으면 Exit For -->
+    if i = 4 Then Exit For
+Next
+
+<!-- In (배열 사용할 때) -->
+Dim arr(5)
+arr(0) = "str0"
+arr(1) = "str1"
+arr(2) = "str2"
+arr(3) = "str3"
+arr(4) = "str4"
+<!-- str0 ~ str4까지 출력 -->
+For s To arr
+    Response.Write(s & <br/>)
+Next
+
+```
+
+### Do Loop
+
+- do 뒤에 조건문을 붙이든 Loop 뒤에 조건문을 붙일수 있다.
+  - 처음에 검증하고 반복문을 도느냐 돌고 나서 검증하냐 차이다
+  - While(~ 동안 ) ,Until(~때 까지 반복한다) 사용가능
+
+* Exit Do를 사용해서 빠져 나올 수 있다.
+
+```VB
+Do While i < 5
+Loop
+
+Do
+Loop While  i < 5
+
+Do Until i < 5
+Loop
+
+Do
+Loop Until i < 5
+
+
+Do
+
+If i = 3 Then Exit Do
+Loop Until i < 5
+
+
+```
