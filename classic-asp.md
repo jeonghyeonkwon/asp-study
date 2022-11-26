@@ -104,8 +104,12 @@ id : <input type="text" name="fid">
 <!-- 쿠기 보내기 -->
 Response.Cookies("key") = "value"
 
+<!-- 쿠키 만료시간 설정 -->
+Response.Cookies("key").Expires = 여기서 만료시간 설정하면 됨
 
 <!-- 쿠키 받기 -->
 str = Request.Cookies("key")
+
+
 %>
 ```
