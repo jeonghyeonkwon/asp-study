@@ -59,3 +59,39 @@ Function fnc()
 end Function
 %>
 ```
+
+## 요청 (GET, POST)
+
+- GET
+
+```VB
+
+<form method="GET" action="search.asp">
+id : <input type="text" name="fid">
+<input type="submit" value="전송">
+</form>
+
+<!-- search.asp -->
+<%
+  http://localhost/search.asp?fid=givejeong
+  Response.write(request.querystring("fid"))
+%>
+```
+
+- POST
+
+```VB
+
+<form method="POST" action="register.asp">
+  id : <input type="text" nmae="fid"><br/>
+  password : <input type="password" name="fpassword"></br>
+  <input type="submit" value="가입하기">
+</form>
+
+<!-- register.asp -->
+<%
+  <!-- http://localhost/register.asp -->
+  Response.write(request.form("fid"))
+  Response.write(request.form("fPASSWORD"))
+%>
+```
