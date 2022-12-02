@@ -119,3 +119,16 @@ Loop Until i < 5
 
 
 ```
+
+## 문자열 더하기
+
+```VB
+
+sql = "SELECT * " & _
+    " FROM ACCOUNT"
+
+<!-- OR -->
+
+sql = "SELECT * "
+sql = sql & " FROM ACCOUNT"
+```
